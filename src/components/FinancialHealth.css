@@ -1,0 +1,164 @@
+.financial-health-container {
+  padding: 24px;
+}
+
+.health-score-card {
+  text-align: center;
+  height: 100%;
+}
+
+.health-score-card .ant-progress {
+  margin: 24px 0;
+}
+
+.score-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-number {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.score-text {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.metrics-card {
+  height: 100%;
+}
+
+.metric-item {
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.metric-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.metric-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: var(--primary-color);
+}
+
+.goals-card {
+  margin: 16px 0;
+}
+
+.goals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.goals-grid {
+  margin-top: 16px;
+}
+
+.goal-card {
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.goal-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.goal-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goal-details {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goal-amount,
+.goal-deadline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommendations-card {
+  margin-top: 16px;
+}
+
+.recommendations-card .ant-list-item {
+  padding: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.recommendations-card .ant-list-item:hover {
+  background-color: var(--background-light);
+}
+
+/* Dark mode support */
+.dark-mode .recommendations-card .ant-list-item:hover {
+  background-color: var(--background-dark);
+}
+
+.dark-mode .metric-item,
+.dark-mode .goal-card {
+  background: var(--card-bg-dark);
+}
+
+.dark-mode .score-text {
+  color: var(--text-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .financial-health-container {
+    padding: 16px;
+  }
+
+  .metric-item {
+    margin-bottom: 16px;
+  }
+
+  .goals-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .goals-header button {
+    width: 100%;
+  }
+}
+
+/* Animations */
+.goal-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.goal-card:nth-child(1) { animation-delay: 0.1s; }
+.goal-card:nth-child(2) { animation-delay: 0.2s; }
+.goal-card:nth-child(3) { animation-delay: 0.3s; }
+.goal-card:nth-child(4) { animation-delay: 0.4s; }
+.goal-card:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

@@ -1,0 +1,145 @@
+.bill-calendar-container {
+  padding: 24px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.calendar-header h2 {
+  margin: 0;
+}
+
+.calendar-card {
+  background: var(--card-bg-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bill-events {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bill-events li {
+  margin-bottom: 4px;
+  padding: 0;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ant-picker-calendar-date-content {
+  height: 80px;
+  overflow-y: auto;
+}
+
+/* Calendar cell styles */
+.ant-picker-calendar-date {
+  transition: all 0.3s ease;
+}
+
+.ant-picker-calendar-date:hover {
+  background-color: var(--hover-light) !important;
+}
+
+.ant-picker-calendar-date-today {
+  border-color: var(--primary-color) !important;
+}
+
+/* Badge styles */
+.ant-badge-status-dot {
+  width: 8px;
+  height: 8px;
+}
+
+.ant-badge-status-text {
+  font-size: 11px;
+  margin-left: 4px;
+}
+
+/* Modal styles */
+.ant-modal-content {
+  border-radius: 8px;
+}
+
+.ant-modal-header {
+  border-radius: 8px 8px 0 0;
+}
+
+/* Dark mode support */
+.dark-mode .calendar-card {
+  background: var(--card-bg-dark);
+}
+
+.dark-mode .ant-picker-calendar-date:hover {
+  background-color: var(--hover-dark) !important;
+}
+
+.dark-mode .ant-picker-calendar {
+  background: var(--card-bg-dark);
+}
+
+.dark-mode .ant-picker-calendar-date {
+  color: var(--text-light);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .bill-calendar-container {
+    padding: 16px;
+  }
+
+  .calendar-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .calendar-header button {
+    width: 100%;
+  }
+
+  .ant-picker-calendar-date-content {
+    height: 60px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.calendar-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Custom scrollbar */
+.ant-picker-calendar-date-content::-webkit-scrollbar {
+  width: 4px;
+}
+
+.ant-picker-calendar-date-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ant-picker-calendar-date-content::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb);
+  border-radius: 2px;
+}
+
+.ant-picker-calendar-date-content::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb-hover);
+} 

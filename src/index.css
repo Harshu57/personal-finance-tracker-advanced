@@ -3,13 +3,45 @@
 /* Add your custom styles below */
 
 :root {
-  --theme: #2970ff;
-}
-body {
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
+  --theme: #0066ff;
+  --theme-dark: #0052cc;
+  --theme-light: #e6f0ff;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+  --text-light: #666;
+  --success: #4CAF50;
+  --danger: #F44336;
+  --warning: #FF9800;
+  --info: #2196F3;
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+}
+
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
 }
 
 input {

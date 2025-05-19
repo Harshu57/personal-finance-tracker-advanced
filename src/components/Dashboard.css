@@ -1,0 +1,151 @@
+.dashboard-container {
+  padding: 24px;
+}
+
+.dashboard-cards {
+  margin-bottom: 24px;
+}
+
+.dashboard-card {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #1890ff;
+  opacity: 0.3;
+  transition: all 0.3s;
+}
+
+.income-icon {
+  color: #52c41a;
+}
+
+.expense-icon {
+  color: #f5222d;
+}
+
+.dashboard-card:hover .card-icon {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.budget-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+.recent-transactions {
+  margin-top: 16px;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-category {
+  font-weight: 500;
+  color: #333;
+}
+
+.transaction-date {
+  font-size: 12px;
+  color: #666;
+}
+
+.transaction-amount {
+  font-weight: 500;
+}
+
+.transaction-amount.income {
+  color: #52c41a;
+}
+
+.transaction-amount.expense {
+  color: #f5222d;
+}
+
+/* Dark mode support */
+.dark-mode .dashboard-card {
+  background-color: #1f1f1f;
+  border-color: #303030;
+}
+
+.dark-mode .transaction-item {
+  border-bottom-color: #303030;
+}
+
+.dark-mode .transaction-category {
+  color: #f5f5f5;
+}
+
+.dark-mode .transaction-date {
+  color: #999;
+}
+
+.dark-mode .budget-details {
+  color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 16px;
+  }
+
+  .dashboard-cards {
+    margin-bottom: 16px;
+  }
+
+  .transaction-item {
+    padding: 8px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-card {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.dashboard-cards .dashboard-card:nth-child(1) { animation-delay: 0.1s; }
+.dashboard-cards .dashboard-card:nth-child(2) { animation-delay: 0.2s; }
+.dashboard-cards .dashboard-card:nth-child(3) { animation-delay: 0.3s; }
+.dashboard-cards .dashboard-card:nth-child(4) { animation-delay: 0.4s; } 
